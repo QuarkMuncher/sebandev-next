@@ -1,0 +1,6 @@
+@use 'sass:map';
+
+$sizes: (xxl: 3rem, xl: 2.7rem, lg: 2.4rem, md: 2rem, sm: 1.8rem, xs: 1.2rem);
+@function size($name) {
+  @return map.get($sizes, $name);
+}

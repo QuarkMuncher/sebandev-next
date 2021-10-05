@@ -1,6 +1,5 @@
 import {getAllPostIds, getPostData} from "../../lib/posts";
 import Head from "next/head";
-import Layout from "../../components/layout";
 import Date from '../../components/date';
 import PostContent from '../../components/postContent';
 import utilStyles from '../../styles/utils.module.scss';
@@ -25,7 +24,7 @@ export async function getStaticPaths() {
 
 export default function Post({postData}) {
   return (
-    <Layout>
+    <div>
       <Head>
         <title>{postData.title} | Seban.dev Blog</title>
       </Head>
@@ -36,6 +35,6 @@ export default function Post({postData}) {
         </div>
         <PostContent content={postData.content} />
       </article>
-    </Layout>
+    </div>
   );
 }
