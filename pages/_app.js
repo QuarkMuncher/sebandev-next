@@ -14,6 +14,7 @@ const Global = createGlobalStyle`
     line-height: 1.6;
     font-size: 16px;
     color: ${props => props.theme.colors.primary};
+    background: ${props => props.theme.colors.tertiary};
   }
 `;
 
@@ -30,6 +31,7 @@ const theme = {
   colors: {
     primary: '#1d2029',
     secondary: '#bf052d',
-    tertiary: '#f8f9fe'
+    tertiary: '#f8f9fe',
+    quaternary: '#25CED1'
   }
 }

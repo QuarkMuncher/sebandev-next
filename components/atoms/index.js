@@ -1,7 +1,9 @@
 import Date from './date';
-import Link from './link';
+import ExternalLink from './externalLink';
+import InternalLink from "./internalLink";
 
 export {
   Date,
-  Link,
+  ExternalLink,
+  InternalLink,
 }

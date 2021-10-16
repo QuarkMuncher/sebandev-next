@@ -1,9 +1,8 @@
 import Head from 'next/head'
-import Link from 'next/link';
 import {getPersonData} from '../lib/person';
 import {getSortedPostsData} from "../lib/posts";
 import Container from "../components/container";
-import {Date} from '../components/atoms';
+import {Date, InternalLink} from '../components/atoms';
 import Profile from '../components/profile';
 import utilStyles from '../styles/utils.module.scss'
 
@@ -32,9 +31,9 @@ export default function Home({allPostsData, personData}) {
           <ul className={utilStyles.list}>
             {allPostsData.map(({id, date, title}) => (
               <li className={utilStyles.listItem} key={id}>
-                <Link href={`blog/${id}`}>
-                  <a>{title}</a>
-                </Link>
+                <InternalLink href={`/blog/${id}`}>
+                  {title}
+                </InternalLink>
                 <br/>
                 <small>
                   <Date dateString={date}/>
@@ -47,3 +46,4 @@ export default function Home({allPostsData, personData}) {
     </Container>
   );
 }
+
