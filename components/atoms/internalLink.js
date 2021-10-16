@@ -4,10 +4,10 @@ import {motion} from 'framer-motion';
 
 const StyledLink = styled(motion.a)`
   display: inline-block;
-  color: ${props => props.theme.colors.secondary};
-  /* background: -webkit-linear-gradient(#eee, #333);
+  //color: ${props => props.theme.colors.secondary};
+   background: -webkit-linear-gradient(#eee, #333);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
+  -webkit-text-fill-color: transparent; 
 `;
 
 export default function InternalLink({href, children}) {
