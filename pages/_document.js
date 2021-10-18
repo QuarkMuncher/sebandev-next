@@ -11,7 +11,9 @@ export default class MyDocument extends Document {
     return(
       <Html>
         <Head>
-          <script src="https://kit.fontawesome.com/68f14829f8.js" crossOrigin="anonymous" />
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+                integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+                crossOrigin="anonymous" />
         </Head>
         <body className={`p-0 m-0 font-mono`} >
           <Container>
