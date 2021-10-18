@@ -8,6 +8,7 @@ import InternalLink from "./internalLink/internalLink";
 import NavLink from "./navLink/navLink";
 import Bar from './bar/bar';
 import Description from "./description/description";
+import Author from "./author/author";
 
 export {
   Container,
@@ -20,4 +21,5 @@ export {
   NavLink,
   Bar,
   Description,
+  Author,
 }

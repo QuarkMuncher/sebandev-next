@@ -1,6 +1,20 @@
-import Link from 'next/link';
-import styles from './index.module.scss';
+import {NavBar} from "../../components/molecules";
 
 export default function Index() {
-  return (<h1>a</h1>);
+  return (
+    <>
+      <NavBar links={[
+        {
+          path: '/',
+          text: 'Home',
+          isActive: false
+        },
+        {
+          path: '/blog',
+          text: 'Blog',
+          isActive: true
+        }
+      ]} />
+    </>
+  );
 }

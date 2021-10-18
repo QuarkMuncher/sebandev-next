@@ -3,6 +3,7 @@ import {getPersonData} from '../lib/person';
 import {getSortedPostsData} from "../lib/posts";
 import {Date, InternalLink} from '../components/atoms';
 import Profile from '../components/molecules/profile/profile';
+import {NavBar} from "../components/molecules";
 
 export async function getStaticProps() {
   const personData = getPersonData();
@@ -22,6 +23,18 @@ export default function Home({allPostsData, personData}) {
       <Head>
         <title>Home | seban.dev</title>
       </Head>
+      <NavBar links={[
+        {
+          path: '/',
+          text: 'Home',
+          isActive: true
+        },
+        {
+          path: '/blog',
+          text: 'Blog',
+          isActive: false
+        }
+      ]} />
       <main>
         <Profile data={personData} />
         <section>

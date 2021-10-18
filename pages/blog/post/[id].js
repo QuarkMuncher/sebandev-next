@@ -1,6 +1,6 @@
 import {getAllPostIds, getPostData} from "../../../lib/posts";
 import Head from "next/head";
-import {PostHead} from "../../../components/molecules";
+import {NavBar, PostHead} from "../../../components/molecules";
 import PostContent from '../../../components/postContent';
 import styles from './[id].module.scss';
 
@@ -27,12 +27,20 @@ export default function Post({postData}) {
       <Head>
         <title>{postData.title} | Seban.dev Blog</title>
       </Head>
+      <NavBar links={[
+        {
+          path: '/',
+          text: 'Home',
+          isActive: false
+        },
+        {
+          path: '/blog',
+          text: 'Blog',
+          isActive: true
+        }
+      ]} />
       <article className={styles.article}>
-        <PostHead data={{
-          title: postData.title,
-          subTitle: postData.subTitle,
-          date: postData.date
-        }} />
+        <PostHead data={postData} />
         <PostContent content={postData.content} />
       </article>
     </>

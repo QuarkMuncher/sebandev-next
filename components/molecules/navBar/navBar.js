@@ -8,6 +8,7 @@ export default function NavBar({links}) {
         key={link.path}
         to={link.path}
         text={link.text}
+        isActive={link.isActive}
       />))}
     </Bar>
   )

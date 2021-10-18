@@ -14,16 +14,6 @@ const theme = {
 export default function App({Component, pageProps}) {
   return (
     <ThemeContext.Provider value={theme}>
-      <NavBar links={[
-        {
-          path: '/',
-          text: 'Home'
-        },
-        {
-          path: '/blog',
-          text: 'Blog'
-        }
-      ]} />
       <Component {...pageProps} />
     </ThemeContext.Provider>
   );

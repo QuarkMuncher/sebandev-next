@@ -1,12 +1,12 @@
-import styles from './postHead.module.scss';
-import {SmallTitle, SubTitle, Date} from "../../atoms";
+import {Title, SubTitle, Date, Author} from "../../atoms";
 
 export default function PostHead({data}) {
   return (
-    <section className={`${styles.postHead} mb-5`}>
-      <SmallTitle text={data.title} />
-      <SubTitle text={data.subTitle} />
+    <section className={`mb-5`}>
+      <Title text={data.title} />
+      <Author name={data.author} />
       <Date dateString={data.date} />
+      <SubTitle text={data.id} className={'mt-1'}/>
     </section>
   )
 }
