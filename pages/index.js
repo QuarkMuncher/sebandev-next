@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import {getPersonData} from '../lib/person';
 import {getSortedPostsData} from "../lib/posts";
-import Container from "../components/container";
+import Container from "../components/atoms/container/container";
 import {Date, InternalLink} from '../components/atoms';
 import Profile from '../components/profile';
 import utilStyles from '../styles/utils.module.scss'
@@ -27,10 +27,10 @@ export default function Home({allPostsData, personData}) {
       <main>
         <Profile data={personData} />
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-          <h2 className={utilStyles.headingLg}>Blog</h2>
-          <ul className={utilStyles.list}>
+          <h2 className={`text-3xl`}>Blog</h2>
+          <ul className={`flex flex-col gap-3 mt-4`}>
             {allPostsData.map(({id, date, title}) => (
-              <li className={utilStyles.listItem} key={id}>
+              <li key={id}>
                 <InternalLink href={`/blog/${id}`}>
                   {title}
                 </InternalLink>
@@ -46,4 +46,3 @@ export default function Home({allPostsData, personData}) {
     </Container>
   );
 }
-
