@@ -3,7 +3,13 @@ import Link from 'next/link';
 import styles from './navLink.module.scss';
 
 export default function NavLink({to, text}) {
-  const router = useRouter();
+  let router;
+
+  if (typeof window === "undefined") {
+    router = useRouter();
+  } else {
+    router = window.location;
+  }
 
   return (
     <li className={`${styles.navLink}`}>
