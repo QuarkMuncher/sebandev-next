@@ -1,4 +1,5 @@
 import ThemeContext from '../Context';
+import {NavBar} from '../components/molecules'
 import '../styles/global.scss';
 
 const theme = {
@@ -13,6 +14,16 @@ const theme = {
 export default function App({Component, pageProps}) {
   return (
     <ThemeContext.Provider value={theme}>
+      <NavBar links={[
+        {
+          path: '/',
+          text: 'Home'
+        },
+        {
+          path: '/blog',
+          text: 'Blog'
+        }
+      ]} />
       <Component {...pageProps} />
     </ThemeContext.Provider>
   );

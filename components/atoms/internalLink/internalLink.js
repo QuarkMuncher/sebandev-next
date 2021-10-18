@@ -10,7 +10,7 @@ export default function InternalLink({href, children}) {
   return (
     <Link href={href} passHref>
       <motion.a
-        className={`${styles.link} text-md`}
+        className={`${styles.link} text-md inline-block no-underline`}
         transition={{
           duration: 0.1
         }}

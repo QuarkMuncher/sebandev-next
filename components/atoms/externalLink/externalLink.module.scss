@@ -1,9 +1,7 @@
 @use "../../../styles/variables";
 
 .link {
-  display: inline-block;
-  text-decoration: none;
-  background: linear-gradient(to right, variables.color(quaternary) 100%, variables.color(secondary) 100%);
+  background: linear-gradient(to right, variables.color(secondary) 100%, variables.color(quaternary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

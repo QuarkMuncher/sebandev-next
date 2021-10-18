@@ -1,8 +1,7 @@
-import {getAllPostIds, getPostData} from "../../lib/posts";
+import {getAllPostIds, getPostData} from "../../../lib/posts";
 import Head from "next/head";
-import Date from '../../components/date';
-import PostContent from '../../components/postContent';
-import utilStyles from '../../styles/utils.module.scss';
+import {PostHead} from "../../../components/molecules";
+import PostContent from '../../../components/postContent';
 import styles from './[id].module.scss';
 
 export async function getStaticProps({params}) {
@@ -24,17 +23,18 @@ export async function getStaticPaths() {
 
 export default function Post({postData}) {
   return (
-    <div>
+    <>
       <Head>
         <title>{postData.title} | Seban.dev Blog</title>
       </Head>
       <article className={styles.article}>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-        <div>
-          <Date dateString={postData.date} />
-        </div>
+        <PostHead data={{
+          title: postData.title,
+          subTitle: postData.subTitle,
+          date: postData.date
+        }} />
         <PostContent content={postData.content} />
       </article>
-    </div>
+    </>
   );
 }
