@@ -1,7 +1,9 @@
-import styles from './postContent.module.scss';
+import {Markdown} from "./atoms";
 
 export default function Content({content}) {
   return (
-    <div dangerouslySetInnerHTML={{__html: content}} />
+    <section className={``}>
+      <Markdown markdown={content} />
+    </section>
   );
 }

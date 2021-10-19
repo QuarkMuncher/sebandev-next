@@ -1,5 +1,5 @@
-import {getAllPostIds, getPostData} from "../../../lib/posts";
 import Head from "next/head";
+import {getAllPostIds, getPostData} from "../../../lib/posts";
 import {NavBar, PostHead} from "../../../components/molecules";
 import PostContent from '../../../components/postContent';
 import styles from './[id].module.scss';

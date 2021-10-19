@@ -21,6 +21,7 @@ export default function InternalLink({href, children}) {
       }}
       href={href}
       target='_blank'
+      rel={'noopener'}
     >
       {children}<span className={`inline-block w-1`} /><i className='fas fa-external-link-alt' aria-hidden/>
     </motion.a>
