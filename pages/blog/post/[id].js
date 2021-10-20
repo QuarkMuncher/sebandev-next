@@ -25,7 +25,7 @@ export default function Post({postData}) {
   return (
     <>
       <Head>
-        <title>{postData.title} | Seban.dev Blog</title>
+        <title>{postData.title} | Blog | Seban.dev</title>
       </Head>
       <NavBar links={[
         {

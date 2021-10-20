@@ -1,8 +1,9 @@
 ---
-title: 'Building a Very Simple Website using Vite'
+title: '[DRAFT]:Building a Very Simple Website using Vite'
 subTitle: 'Vite makes bundling super easy.'
 date: '2021-10-19'
 author: 'Sebastian Andersen'
+draft:
 ---
 
 > Vite is kind of a cool tool, to develop static
@@ -14,13 +15,6 @@ author: 'Sebastian Andersen'
 To get started we need to initialize a project with Vite
 
 > Requires at least node@v12.0.0
-
-```js
-const fish = ({yay}) => {
-  return yay.replace(/a/, '');
-};
-console.log(fish({yay: 'what?'}));
-```
 
 ```shell
 npm init vite@latest

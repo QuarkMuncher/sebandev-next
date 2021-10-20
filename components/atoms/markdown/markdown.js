@@ -1,7 +1,7 @@
 import MD from 'react-markdown';
 import {Prism} from 'react-syntax-highlighter';
 import style from './style';
-import {ExternalLink, InternalLink} from "../../atoms";
+import {ExternalLink, InternalLink} from "..";
 
 export default function Markdown({markdown}) {
   return (
@@ -18,6 +18,12 @@ export default function Markdown({markdown}) {
         },
         p: ({children}) => {
           return(<p className={`my-1`}>{children}</p>);
+        },
+        blockquote: ({children}) => {
+          return (<blockquote className={`relative p-4 italic quote`}>
+            <div className={`right-[96%] mr-2 hidden md:block text-8xl text-red-300 top-0 absolute leading-none`} aria-hidden>&ldquo;</div>
+            {children}
+          </blockquote>);
         },
         code: ({node, inline, className, children, ...props}) => {
           const match = /language-(\w+)/.exec(className || '');

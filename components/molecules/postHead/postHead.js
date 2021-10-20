@@ -6,7 +6,7 @@ export default function PostHead({data}) {
       <Title text={data.title} />
       <Author name={data.author} />
       <Date dateString={data.date} />
-      <SubTitle text={data.id} className={'mt-1'}/>
+      <SubTitle text={data.subTitle} className={'mt-2'}/>
     </section>
   )
 }

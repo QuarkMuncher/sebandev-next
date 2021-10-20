@@ -38,9 +38,9 @@ export default function Home({allPostsData, personData}) {
       <main>
         <Profile data={personData} />
         <section>
-          <h2 className={`text-2xl sm:text-3xl`}>Blog</h2>
+          <h2 className={`text-2xl sm:text-3xl`}>Recent Posts</h2>
           <ul className={`flex flex-col gap-2 mt-3`}>
-            {allPostsData.map(({id, date, title}) => (
+            {allPostsData.slice(0,4).map(({id, date, title}) => (
               <li key={id}>
                 <InternalLink href={`/blog/post/${id}`}>
                   {title}
