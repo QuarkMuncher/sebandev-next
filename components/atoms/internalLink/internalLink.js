@@ -4,13 +4,13 @@ import Link from 'next/link';
 import styles from './internalLink.module.scss';
 import {motion} from 'framer-motion';
 
-export default function InternalLink({href, children}) {
+export default function InternalLink({href, children, className}) {
   const theme = useContext(ThemeContext);
 
   return (
     <Link href={href} passHref>
       <motion.a
-        className={`${styles.link} text-md inline-block no-underline`}
+        className={`${styles.link} ${className} text-md inline-block no-underline`}
         transition={{
           duration: 0.1
         }}

@@ -36,7 +36,7 @@ export default function Index({postData}) {
         <ul className='flex flex-col gap-2 mt-3'>
           {postData.map(post => (
             <li key={post.slug}>
-              <InternalLink href={`/blog/post/${post.slug}`}>{<SmallTitle className={`inline-block`} text={post.title} />}</InternalLink>
+              <InternalLink href={`/blog/post/${post.slug}`} className={`text-xl sm:text-2xl`}>{post.title}</InternalLink>
               <SubTitle text={post.subTitle} />
               <Author name={post.author} />
               <small>
