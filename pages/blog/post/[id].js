@@ -5,6 +5,7 @@ import PostContent from '../../../components/postContent';
 import styles from './[id].module.scss';
 
 export async function getStaticProps({params}) {
+  
   const postData = await getPostData(params.id);
   return {
     props: {

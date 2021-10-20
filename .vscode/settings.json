@@ -1,0 +1,5 @@
+{
+    "frontMatter.preview.host": "http://localhost:3000/blog/post",
+    "[markdown]": {
+    }
+}

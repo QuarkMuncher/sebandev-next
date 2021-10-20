@@ -40,9 +40,9 @@ export default function Home({allPostsData, personData}) {
         <section>
           <h2 className={`text-2xl sm:text-3xl`}>Recent Posts</h2>
           <ul className={`flex flex-col gap-2 mt-3`}>
-            {allPostsData.slice(0,4).map(({id, date, title}) => (
-              <li key={id}>
-                <InternalLink href={`/blog/post/${id}`}>
+            {allPostsData.length < 1 ? <h1 className="text-xl">There seems to be no posts</h1> : allPostsData.slice(0,4).map(({slug, date, title}) => (
+              <li key={slug}>
+                <InternalLink href={`/blog/post/${slug}`}>
                   {title}
                 </InternalLink>
                 <br/>

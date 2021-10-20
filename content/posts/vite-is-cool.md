@@ -1,9 +1,11 @@
 ---
-title: '[DRAFT]:Building a Very Simple Website using Vite'
-subTitle: 'Vite makes bundling super easy.'
-date: '2021-10-19'
-author: 'Sebastian Andersen'
-draft:
+title: Building a Very Simple Website using Vite
+subTitle: Vite makes bundling super easy.
+date: '2021-10-20T12:43:04.952Z'
+author: Sebastian Andersen
+draft: true
+lastmod: '2021-10-20T12:39:28.822Z'
+slug: building-simple-website-vite
 ---
 
 > Vite is kind of a cool tool, to develop static
