@@ -39,9 +39,11 @@ export default function Markdown({markdown}) {
         },
         blockquote: ({children}) => {
           return (
-          <blockquote className={`relative p-4 italic quote`}>
-            <div className={`right-[96%] mr-2 hidden md:block text-8xl text-red-300 top-0 absolute leading-none`} aria-hidden>&ldquo;</div>
+          <blockquote className={`relative my-4 px-4 pt-11 pb-1 italic quote bg-gray-100 text-gray-900`}>
+            <div className={`absolute z-0 top-[0] lef-0 right-0 py-1 pl-5 w-full bg-gray-200`}>Quote</div>
+            <div className={`absolute top-[-1rem] right-[96%] mr-2 hidden md:block text-8xl text-red-300 leading-none`} aria-hidden>&ldquo;</div>
             {children}
+
           </blockquote>
           );
         },
