@@ -1,29 +1,12 @@
-import {useContext} from "react";
-import ThemeContext from "../../../Context";
-import styles from './externalLink.module.scss';
-import {motion} from 'framer-motion';
-
-export default function InternalLink({href, children}) {
-  const theme = useContext(ThemeContext);
+export default function ExternalLink({href, children, className}) {
 
   return (
-    <motion.a
-      className={`${styles.link} text-md inline-block no-underline`}
-      transition={{
-        duration: 0.1
-      }}
-      whileHover={{
-        background: `linear-gradient(to right, ${theme.colors.quaternary} 100%, ${theme.colors.secondary} 100%)`,
-        backgroundClip: 'text'
-      }}
-      whileTap={{
-        scale: 0.9,
-      }}
-      href={href}
-      target='_blank'
-      rel={'noopener'}
-    >
+    <a
+    href={href}
+    target='_blank'
+    rel='noopener noreferrer'
+    className={`${className? `${className} ` : ''}transition duration-100 ease-in scale-100 active:scale-90 hover:text-red-700 text-blue-700 text-md inline-block no-underline`}>
       {children}<span className={`inline-block w-1`} /><i className='fas fa-external-link-alt' aria-hidden/>
-    </motion.a>
+    </a>
   );
 }

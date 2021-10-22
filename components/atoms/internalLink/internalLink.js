@@ -1,29 +1,13 @@
-import {useContext} from "react";
-import ThemeContext from "../../../Context";
 import Link from 'next/link';
-import styles from './internalLink.module.scss';
-import {motion} from 'framer-motion';
 
 export default function InternalLink({href, children, className}) {
-  const theme = useContext(ThemeContext);
-
   return (
     <Link href={href} passHref>
-      <motion.a
-        className={`${styles.link} ${className} text-md inline-block no-underline`}
-        transition={{
-          duration: 0.1
-        }}
-        whileHover={{
-          background: `linear-gradient(to right, ${theme.colors.quaternary} 100%, ${theme.colors.secondary} 100%)`,
-          backgroundClip: 'text'
-        }}
-        whileTap={{
-          scale: 0.9,
-        }}
+      <a
+        className={`${className? `${className} ` : ''}transition duration-100 ease-in scale-100 active:scale-90 text-red-700 hover:text-blue-700 text-md inline-block no-underline`}
       >
         {children}
-      </motion.a>
+      </a>
     </Link>
   );
 }
