@@ -4,7 +4,7 @@ slug: hello-world
 description: 'This is a small blog post that is used to test the Markdown rendering setup, it''s released for fun.'
 author: Sebastian Andersen
 date: '2021-10-20T13:38:07.415Z'
-lastmod: '2021-10-21T09:20:54.830Z'
+lastmod: '2021-10-22T07:19:30.195Z'
 draft: false
 tags: []
 categories: []
@@ -25,7 +25,7 @@ x> Hello, this is an error blockquote.
 
 ### Code samples
 
-```shell
+```bash
 exa -lGah ./
 ```
 

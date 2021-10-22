@@ -1,7 +1,6 @@
 import MD from 'react-markdown';
-import {Prism} from 'react-syntax-highlighter';
-import style from './style';
 import remarkHint from 'remark-hint';
+import { Highlighter } from '../../atoms';
 
 import {ExternalLink, InternalLink} from "..";
 import Tip from './tip';
@@ -69,10 +68,3 @@ export default function Markdown({markdown}) {
 
 }
 
-function Highlighter({language, code}) {
-  return (
-    <Prism className={`!mb-5 !mt-1`} language={language} style={style}>
-      {code}
-    </Prism>
-  )
-}
