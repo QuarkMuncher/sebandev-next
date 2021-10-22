@@ -27,6 +27,9 @@ export default function Post({postData}) {
     <>
       <Head>
         <title>{postData.title} | Blog | Seban.dev</title>
+        <meta name="description" content={postData.description} />
+        <meta itemProp="name" content={`${postData.title} | seban.dev`} />
+        <meta itemProp="description" content={postData.description} />
       </Head>
       <NavBar links={[
         {
