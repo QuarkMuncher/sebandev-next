@@ -66,7 +66,12 @@ export default function Markdown({ markdown }) {
               {...props}
             />
           ) : (
-            <code className={className} {...props}>
+            <code
+              className={`${
+                className ? `${className} ` : ""
+              } bg-gray-200 px-2 py-1 rounded italic`}
+              {...props}
+            >
               {children}
             </code>
           );
