@@ -2,7 +2,7 @@ import guid from "../../../lib/guid";
 import { BlueTag, RedTag, YellowTag, GreenTag } from "../../atoms";
 
 const colorMap = {
-  blue: "series",
+  blue: "seriesquickshot",
   red: "vite",
   yellow: "vanilla",
   green: "javascript",
