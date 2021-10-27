@@ -3,8 +3,8 @@ title: Hello World
 slug: hello-world
 description: 'This is a small blog post that is used to test the Markdown rendering setup, it''s released for fun.'
 author: Sebastian Andersen
-date: '2021-10-20T13:38:07.415Z'
-lastmod: '2021-10-22T07:19:30.195Z'
+date: '2021-10-27T09:25:34.394Z'
+lastmod: '2021-10-27T09:25:41.012Z'
 draft: false
 tags: []
 categories: []

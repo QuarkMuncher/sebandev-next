@@ -10,7 +10,12 @@ import Bar from './bar/bar';
 import Description from "./description/description";
 import Author from "./author/author";
 import Markdown from "./markdown/markdown";
-import { Highlighter } from "./highlighter/highlighter";
+import Highlighter from "./highlighter/highlighter";
+import CardBody from './cardBody/cardBody';
+import BlueTag from "./blueTag/blueTag";
+import RedTag from './redTag/redTag';
+import YellowTag from './yellowTag/yellowTag';
+import GreenTag from './greenTag/greenTag';
 
 export {
   Container,
@@ -26,4 +31,9 @@ export {
   Author,
   Markdown,
   Highlighter,
+  CardBody,
+  BlueTag,
+  RedTag,
+  YellowTag,
+  GreenTag,
 }

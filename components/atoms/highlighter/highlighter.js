@@ -14,7 +14,7 @@ const languages = [
     ['json', json]
 ];
 
-export function Highlighter({language, code}) {
+export default function Highlighter({language, code}) {
     languages.forEach(language => {
         const [name, definition] = language;
         Prism.registerLanguage(name, definition);
